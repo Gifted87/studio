@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Landmark } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const partners = [
   { name: 'Partner 1', logo: 'https://placehold.co/150x80.png', dataAiHint: 'corporate logo' },
@@ -45,31 +46,31 @@ export default function Home() {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-accent">Welcome to MAN</h2>
+            <h2 className="font-headline text-3xl md:text-4xl font-bold text-accent">Welcome to The Miners Association of Nigeria (MAN)</h2>
             <p className="mt-2 max-w-3xl mx-auto text-muted-foreground">
-              Your gateway to the heart of Nigeria&apos;s mining industry.
+              Your gateway to the heart of Nigeria&apos;s mining industry. We are a national organization representing individuals and companies involved in mineral resource exploration and exploitation in Nigeria.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="flex flex-col items-center">
               <Landmark className="h-12 w-12 text-primary" />
-              <h3 className="font-headline text-2xl font-semibold mt-4">Our History</h3>
+              <h3 className="font-headline text-2xl font-semibold mt-4">Our Members</h3>
               <p className="mt-2 text-muted-foreground">
-                Founded to unite and empower miners across Nigeria, MAN has a rich history of advocacy and development.
+                MAN&apos;s membership includes exploration, quarry, and mining companies, as well as service and consultancy firms related to the mining sector.
               </p>
             </div>
             <div className="flex flex-col items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
               <h3 className="font-headline text-2xl font-semibold mt-4">Our Mission</h3>
               <p className="mt-2 text-muted-foreground">
-                To foster a sustainable and prosperous mining sector through collaboration, innovation, and responsible practices.
+                To empower operators to mine with ease, fostering wealth creation and employment opportunities.
               </p>
             </div>
             <div className="flex flex-col items-center">
             <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M2.5 8C2.5 7.44772 2.94772 7 3.5 7H20.5C21.0523 7 21.5 7.44772 21.5 8V18C21.5 18.5523 21.0523 19 20.5 19H3.5C2.94772 19 2.5 18.5523 2.5 18V8Z"/><path d="M7 15L9.5 12.5L12.5 15.5L16.5 11.5L21.5 16.5"/><circle cx="8" cy="11" r="1"/></svg>
               <h3 className="font-headline text-2xl font-semibold mt-4">Our Vision</h3>
               <p className="mt-2 text-muted-foreground">
-                To position Nigeria as a leading global mining destination, driven by excellence and ethical standards.
+                To create a conducive environment for mining activities through positive engagement with the government.
               </p>
             </div>
           </div>
@@ -82,9 +83,34 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      {/* How to Join Section */}
+      <section className="py-16 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <Card>
+              <CardHeader className="text-center">
+                <CardTitle className="font-headline text-3xl text-accent">How to Join MAN</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-center text-muted-foreground mb-6">
+                  To join the Miners Association of Nigeria (MAN), you typically need to meet their membership criteria, which often includes a connection to the mining industry. The process usually involves filling out an application form, providing relevant information and documents, and paying the required fees.
+                </p>
+                <div className="text-center">
+                   <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                      <Link href="/membership">
+                        Start Your Application <ArrowRight className="ml-2" />
+                      </Link>
+                    </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
 
       {/* Partners Section */}
-      <section className="py-16 bg-secondary">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <h2 className="font-headline text-3xl text-center font-bold text-accent mb-8">
             Our Partners &amp; Affiliates

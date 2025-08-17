@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Landmark } from 'lucide-react';
+import { Landmark, User, Users } from 'lucide-react';
 
 const leadershipTeam = [
   {
-    name: 'Dr. Amina Garba',
-    title: 'President',
-    bio: 'A seasoned geologist with over 20 years of experience in mineral exploration and policy development. Dr. Garba is passionate about sustainable mining practices.',
+    name: "Mr 'Dele Ayanleke",
+    title: 'National President',
+    bio: "Born over six decades ago, he holds a Higher Diploma in Marketing and an MBA. He has been in the mining industry since 1999 and is the Director of Operations of Topmost Minerals and Allied Resources Limited. He was elected National President on 3rd August, 2023.",
     image: 'https://placehold.co/100x100.png',
-    initials: 'AG',
-    dataAiHint: 'professional headshot',
+    initials: 'DA',
+    dataAiHint: 'professional headshot man',
   },
   {
     name: 'Engr. Tunde Bello',
@@ -19,6 +19,14 @@ const leadershipTeam = [
     image: 'https://placehold.co/100x100.png',
     initials: 'TB',
     dataAiHint: 'professional headshot',
+  },
+  {
+      name: 'Jimoh Fatai Kolawole',
+      title: 'Public Relations Officer',
+      bio: 'An experienced Mining Engineer with over 20 years of experience, currently a PhD student. CEO of Hnf Global Resources Ltd and C.O.O of several other companies. He is a registered member of multiple engineering and geoscientist societies.',
+      image: 'https://placehold.co/100x100.png',
+      initials: 'JK',
+      dataAiHint: 'professional headshot man',
   },
   {
     name: 'Hajiya Fatima Sani',
@@ -54,9 +62,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="font-headline text-3xl font-bold text-accent mb-4">Our History</h2>
+              <h2 className="font-headline text-3xl font-bold text-accent mb-4">Our History & Purpose</h2>
               <p className="text-muted-foreground mb-4">
-                The Miners Association of Nigeria (MAN) was established in 1994 as a response to the growing need for a unified voice for all stakeholders in the country&apos;s solid minerals sector. From a small group of passionate miners, we have grown into a formidable national body, representing the interests of individual miners, corporate entities, and service providers.
+              The Miners Association of Nigeria (MAN) is a national organization representing individuals and companies involved in mineral resource exploration and exploitation in Nigeria. MAN's membership includes exploration, quarry, and mining companies, as well as service and consultancy firms related to the mining sector.
               </p>
               <p className="text-muted-foreground">
                 Over the decades, MAN has been instrumental in shaping government policy, promoting investment, and advocating for safe and environmentally responsible mining practices. Our journey is a testament to the resilience and potential of the Nigerian mining industry.
@@ -88,7 +96,7 @@ export default function AboutPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">To promote and protect the interests of the mining industry in Nigeria, fostering a safe, sustainable, and prosperous sector for all stakeholders.</p>
+                <p className="text-muted-foreground">To empower operators to mine with ease, fostering wealth creation and employment opportunities.</p>
               </CardContent>
             </Card>
             <Card>
@@ -99,18 +107,18 @@ export default function AboutPage() {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">To be the leading catalyst for Nigeria&apos;s emergence as a top-tier global mining destination, recognized for its rich resources and commitment to best practices.</p>
+                <p className="text-muted-foreground">To create a conducive environment for mining activities through positive engagement with the government.</p>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <CardTitle className="font-headline text-2xl text-accent flex items-center justify-center gap-2">
-                  <Landmark className="w-7 h-7" />
-                  Our Values
+                  <Users className="w-7 h-7" />
+                  Our Members
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground">Integrity, Sustainability, Collaboration, Innovation, and Excellence guide every action we take and decision we make.</p>
+                <p className="text-muted-foreground">Our membership includes exploration, quarry, and mining companies, as well as service and consultancy firms.</p>
               </CardContent>
             </Card>
           </div>
@@ -126,7 +134,7 @@ export default function AboutPage() {
               Meet the dedicated team steering the Miners Association of Nigeria towards a brighter future.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
             {leadershipTeam.map((member) => (
               <Card key={member.name} className="text-center">
                 <CardContent className="pt-6">
