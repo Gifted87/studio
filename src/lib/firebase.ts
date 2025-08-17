@@ -3,7 +3,7 @@
  * This file should be imported only on the server side.
  */
 import * as admin from 'firebase-admin';
-import { getApps, initializeApp, cert } from 'firebase-admin/app';
+import { getApps, initializeApp } from 'firebase-admin/app';
 import { getFirestore } from 'firebase-admin/firestore';
 
 if (!getApps().length) {
