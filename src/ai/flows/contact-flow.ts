@@ -1,4 +1,3 @@
-
 'use server';
 /**
  * @fileOverview A flow for handling contact form submissions.
@@ -10,6 +9,7 @@
 
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
+import {firestore} from '@/lib/firebase';
 
 export const SendMessageInputSchema = z.object({
   name: z.string().describe('The name of the person sending the message.'),
@@ -36,13 +36,21 @@ const sendMessageFlow = ai.defineFlow(
     outputSchema: SendMessageOutputSchema,
   },
   async (input) => {
-    // In a real application, you would add logic here to send an email,
-    // save the message to a database, or call an external service.
-    console.log('Received contact form submission:', input);
-
-    // For now, we'll just simulate a successful submission.
-    return {
-      success: true,
-    };
+    try {
+      const messagesCollection = firestore.collection('messages');
+      await messagesCollection.add({
+        ...input,
+        createdAt: new Date(),
+      });
+      return {
+        success: true,
+      };
+    } catch (e: any) {
+        console.error('Error saving message to Firestore', e);
+        return {
+            success: false,
+            error: e.message || 'An unexpected error occurred while saving the message.',
+        }
+    }
   }
 );
