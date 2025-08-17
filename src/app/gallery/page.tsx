@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlayCircle } from 'lucide-react';
@@ -5,8 +6,12 @@ import { Suspense } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { adminSDK } from '@/lib/firebase';
 import { getStorage } from 'firebase-admin/storage';
+import { getApps } from 'firebase-admin/app';
 
 async function getGalleryImages() {
+  if (getApps().length === 0) {
+    adminSDK.initializeApp();
+  }
   const storage = getStorage();
   const bucketName = process.env.GCLOUD_STORAGE_BUCKET || `${process.env.GOOGLE_CLOUD_PROJECT}.appspot.com`;
   
