@@ -1,8 +1,10 @@
+
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import React from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -16,6 +18,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { sendMessage, SendMessageInput } from "@/ai/flows/contact-flow";
+import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters."),
@@ -26,6 +30,7 @@ const formSchema = z.object({
 
 export function ContactForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -37,13 +42,29 @@ export function ContactForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We will get back to you shortly.",
-    });
-    form.reset();
+  async function onSubmit(values: SendMessageInput) {
+    setIsSubmitting(true);
+    try {
+      const result = await sendMessage(values);
+      if (result.success) {
+        toast({
+          title: "Message Sent!",
+          description: "Thank you for contacting us. We will get back to you shortly.",
+        });
+        form.reset();
+      } else {
+        throw new Error(result.error || "An unknown error occurred.");
+      }
+    } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred.";
+        toast({
+            variant: "destructive",
+            title: "Error Sending Message",
+            description: errorMessage,
+        });
+    } finally {
+        setIsSubmitting(false);
+    }
   }
 
   return (
@@ -105,7 +126,8 @@ export function ContactForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+        <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isSubmitting}>
+          {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           Send Message
         </Button>
       </form>
