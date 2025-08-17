@@ -18,7 +18,7 @@ const newsItems = [
     title: 'New Policy on Artisanal Mining Released',
     date: 'October 15, 2023',
     excerpt: 'The federal government has released new guidelines aimed at formalizing the artisanal mining sector...',
-    image: 'https://placehold.co/600x400.png',
+    image: 'https://images.unsplash.com/photo-1618828665011-0abd973f7bb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuaWdlcmlhfGVufDB8fHx8MTc1NTQyNDQ3N3ww&ixlib=rb-4.1.0&q=80&w=1080',
     dataAiHint: 'mining regulations',
   },
   {
