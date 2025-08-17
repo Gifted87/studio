@@ -5,11 +5,11 @@ import { ArrowRight, Landmark } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const partners = [
-  { name: 'Partner 1', logo: 'http://portal.minesandsteel.gov.ng/Content/images/mmsd-logo-green.png', dataAiHint: 'corporate logo' },
+  { name: 'Partner 1', logo: 'https://www.cbn.gov.ng/images/CBN_Logo_Wordmark.png', dataAiHint: 'corporate logo' },
   { name: 'Partner 2', logo: 'https://nepc.gov.ng/cms/wp-content/uploads/2018/06/logo-NEPC-left-res2-1.png', dataAiHint: 'corporate logo' },
   { name: 'Partner 3', logo: 'https://shipperscouncil.gov.ng/wp-content/uploads/2023/04/logo-corporate-5.png', dataAiHint: 'corporate logo' },
   { name: 'Partner 4', logo: 'https://www.rmrdc.gov.ng/img/logo.gif', dataAiHint: 'corporate logo' },
-  { name: 'Partner 5', logo: 'https://neiti.gov.ng/static/media/new-logo.e525203094f73b137f8c.jpg', dataAiHint: 'corporate logo' },
+  { name: 'Partner 5', logo: 'https://www.nipc.gov.ng/wp-content/uploads/2025/07/20250703-NIPC-Logo-NEW-ALT.png', dataAiHint: 'corporate logo' },
   { name: 'Partner 6', logo: 'https://accinigeria.com/wp-content/uploads/2024/04/retina.png', dataAiHint: 'corporate logo' },
 ];
 

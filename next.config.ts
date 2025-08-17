@@ -58,6 +58,14 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'accinigeria.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.cbn.gov.ng',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.nipc.gov.ng',
+      },
     ],
   },
 };
