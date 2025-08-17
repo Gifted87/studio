@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import React from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -22,6 +23,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { registerMember, RegisterMemberInput } from "@/ai/flows/membership-flow";
+import { Loader2 } from "lucide-react";
 
 const formSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters."),
@@ -35,6 +38,7 @@ const formSchema = z.object({
 
 export function MembershipForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -46,12 +50,29 @@ export function MembershipForm() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Application Submitted!",
-      description: "Thank you for registering. Please proceed to payment to complete your application.",
-    });
+  async function onSubmit(values: RegisterMemberInput) {
+    setIsSubmitting(true);
+    try {
+      const result = await registerMember(values);
+      if (result.success) {
+        toast({
+          title: "Application Submitted!",
+          description: "Thank you for registering. We have received your application and will be in touch shortly.",
+        });
+        form.reset();
+      } else {
+        throw new Error(result.error || "An unknown error occurred.");
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "An unexpected error occurred.";
+      toast({
+        variant: "destructive",
+        title: "Error Submitting Application",
+        description: errorMessage,
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -130,22 +151,11 @@ export function MembershipForm() {
             </FormItem>
           )}
         />
-        <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90">
+        <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={isSubmitting}>
+          {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
           Submit Application
         </Button>
       </form>
-
-      <div className="mt-8 text-center">
-        <p className="text-sm text-muted-foreground mb-4">After submitting, please complete your registration by paying the membership fee via one of our secure payment partners.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild className="w-full sm:w-auto" variant="outline">
-                <a href="https://paystack.com/" target="_blank" rel="noopener noreferrer">Pay with Paystack</a>
-            </Button>
-            <Button asChild className="w-full sm:w-auto" variant="outline">
-                <a href="https://flutterwave.com/" target="_blank" rel="noopener noreferrer">Pay with Flutterwave</a>
-            </Button>
-        </div>
-      </div>
     </Form>
   );
 }
