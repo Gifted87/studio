@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Gem, Mail, MapPin, Phone, Twitter, Facebook, Linkedin } from 'lucide-react';
+import Image from 'next/image';
+import { Mail, MapPin, Phone, Twitter, Facebook, Linkedin } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -9,11 +10,11 @@ export default function Footer() {
           {/* About */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Gem className="h-8 w-8 text-primary" />
+              <Image src="https://i.ibb.co/p6jFJjXy/download-3.webp" alt="MAN Logo" width={40} height={40} />
               <span className="font-headline text-xl font-bold">MAN</span>
             </Link>
             <p className="text-sm text-accent-foreground/80">
-              Championing the growth and sustainability of Nigeria&apos;s mining sector through advocacy, collaboration, and innovation.
+              The Miners Association of Nigeria (MAN) aims to promote the growth and development of the mining sector in Nigeria.
             </p>
           </div>
 
@@ -23,8 +24,9 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/about" className="text-sm hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/membership" className="text-sm hover:text-primary transition-colors">Membership</Link></li>
-              <li><Link href="/contact" className="text-sm hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/news" className="text-sm hover:text-primary transition-colors">News & Events</Link></li>
               <li><Link href="/gallery" className="text-sm hover:text-primary transition-colors">Gallery</Link></li>
+              <li><Link href="/contact" className="text-sm hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 

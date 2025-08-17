@@ -3,16 +3,18 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
-import { Gem, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About Us' },
   { href: '/membership', label: 'Membership' },
+  { href: '/news', label: 'News & Events' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -25,7 +27,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Gem className="h-8 w-8 text-primary" />
+          <Image src="https://i.ibb.co/p6jFJjXy/download-3.webp" alt="MAN Logo" width={40} height={40} />
           <span className="font-headline text-xl font-bold text-accent">MAN</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
@@ -51,11 +53,11 @@ export default function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[350px]">
-                <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
+              <SheetTitle className="sr-only">Mobile Navigation Menu</SheetTitle>
               <div className="flex flex-col h-full">
                 <div className="flex justify-between items-center border-b pb-4">
                     <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                        <Gem className="h-8 w-8 text-primary" />
+                        <Image src="https://i.ibb.co/p6jFJjXy/download-3.webp" alt="MAN Logo" width={40} height={40} />
                         <span className="font-headline text-xl font-bold text-accent">MAN</span>
                     </Link>
                     <SheetClose asChild>
