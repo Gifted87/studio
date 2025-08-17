@@ -13,6 +13,14 @@ const leadershipTeam = [
     dataAiHint: 'professional headshot man',
   },
   {
+    name: 'Hon. Ibrahim Mohammed Danyaro',
+    title: '1st Vice-President',
+    bio: 'Born in 1965, Hon. Danyaro has a background in education and politics, serving as a local government Chairman. An experienced miner of Gypsum, Phosphate, and Limestone, he owns Danyaro Ventures Nig. Ltd. and holds key leadership roles in the association.',
+    image: 'https://placehold.co/100x100.png',
+    initials: 'ID',
+    dataAiHint: 'professional headshot man',
+  },
+  {
     name: 'Engr. Tunde Bello',
     title: 'Vice President',
     bio: 'A mining engineer with expertise in large-scale operations and technological innovation. Engr. Bello focuses on modernizing the Nigerian mining sector.',
