@@ -5,12 +5,12 @@ import { ArrowRight, Landmark } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const partners = [
-  { name: 'Partner 1', logo: 'https://placehold.co/150x80.png', dataAiHint: 'corporate logo' },
-  { name: 'Partner 2', logo: 'https://placehold.co/150x80.png', dataAiHint: 'corporate logo' },
-  { name: 'Partner 3', logo: 'https://placehold.co/150x80.png', dataAiHint: 'corporate logo' },
-  { name: 'Partner 4', logo: 'https://placehold.co/150x80.png', dataAiHint: 'corporate logo' },
-  { name: 'Partner 5', logo: 'https://placehold.co/150x80.png', dataAiHint: 'corporate logo' },
-  { name: 'Partner 6', logo: 'https://placehold.co/150x80.png', dataAiHint: 'corporate logo' },
+  { name: 'Partner 1', logo: 'http://portal.minesandsteel.gov.ng/Content/images/mmsd-logo-green.png', dataAiHint: 'corporate logo' },
+  { name: 'Partner 2', logo: 'https://nepc.gov.ng/cms/wp-content/uploads/2018/06/logo-NEPC-left-res2-1.png', dataAiHint: 'corporate logo' },
+  { name: 'Partner 3', logo: 'https://shipperscouncil.gov.ng/wp-content/uploads/2023/04/logo-corporate-5.png', dataAiHint: 'corporate logo' },
+  { name: 'Partner 4', logo: 'https://www.rmrdc.gov.ng/img/logo.gif', dataAiHint: 'corporate logo' },
+  { name: 'Partner 5', logo: 'https://neiti.gov.ng/static/media/new-logo.e525203094f73b137f8c.jpg', dataAiHint: 'corporate logo' },
+  { name: 'Partner 6', logo: 'https://accinigeria.com/wp-content/uploads/2024/04/retina.png', dataAiHint: 'corporate logo' },
 ];
 
 export default function Home() {
@@ -94,7 +94,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-center text-muted-foreground mb-6">
-                Ready to join us? To become a member, you'll need to have a connection to the mining industry. The process is straightforward: fill out our application form and provide the necessary information and documents to get started.
+                  Ready to join us? To become a member, you&apos;ll need to have a connection to the mining industry. The process is straightforward: fill out our application form and provide the necessary information and documents to get started.
                 </p>
                 <div className="text-center">
                    <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">

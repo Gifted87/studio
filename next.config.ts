@@ -33,7 +33,31 @@ const nextConfig: NextConfig = {
         hostname: 'i.ibb.co',
         port: '',
         pathname: '/**',
-      }
+      },
+      {
+        protocol: 'http',
+        hostname: 'portal.minesandsteel.gov.ng',
+      },
+      {
+        protocol: 'https',
+        hostname: 'nepc.gov.ng',
+      },
+      {
+        protocol: 'https',
+        hostname: 'shipperscouncil.gov.ng',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.rmrdc.gov.ng',
+      },
+      {
+        protocol: 'https',
+        hostname: 'neiti.gov.ng',
+      },
+      {
+        protocol: 'https',
+        hostname: 'accinigeria.com',
+      },
     ],
   },
 };
