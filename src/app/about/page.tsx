@@ -44,6 +44,14 @@ const leadershipTeam = [
     initials: 'CO',
     dataAiHint: 'professional headshot man',
   },
+  {
+    name: 'Tope Adebanjo',
+    title: 'Mining Professional',
+    bio: 'With over 20 years of experience, Tope is the MD of Borta-Cup Ventures Limited and founder of Laurel School of Mines. He is a champion of opportunity and believes in achieving dreams through investment opportunities in the mining of Nigeria\'s untapped riches.',
+    image: 'https://placehold.co/100x100.png',
+    initials: 'TA',
+    dataAiHint: 'professional headshot man',
+  },
 ];
 
 export default function AboutPage() {
