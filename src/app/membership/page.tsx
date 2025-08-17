@@ -26,12 +26,6 @@ const categories = [
     description: 'For professionals, consultants, and sole proprietors in the mining sector.',
     features: ['Full voting rights', 'Access to all publications', 'Individual directory listing'],
   },
-  {
-    icon: <GraduationCap className="h-10 w-10 text-primary" />,
-    title: 'Student Membership',
-    description: 'For students enrolled in geology, mining engineering, and related fields.',
-    features: ['Access to educational resources', 'Mentorship opportunities', 'Reduced event fees'],
-  },
 ];
 
 export default function MembershipPage() {
@@ -74,7 +68,7 @@ export default function MembershipPage() {
               Choose the plan that best fits your needs.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {categories.map((category, index) => (
               <Card key={index} className="flex flex-col">
                 <CardHeader className="items-center text-center">

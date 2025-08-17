@@ -28,7 +28,7 @@ const formSchema = z.object({
   email: z.string().email("Please enter a valid email address."),
   phone: z.string().min(10, "Please enter a valid phone number."),
   company: z.string().optional(),
-  membershipType: z.enum(["corporate", "individual", "student"], {
+  membershipType: z.enum(["corporate", "individual"], {
     required_error: "You need to select a membership type.",
   }),
 });
@@ -124,7 +124,6 @@ export function MembershipForm() {
                 <SelectContent>
                   <SelectItem value="corporate">Corporate</SelectItem>
                   <SelectItem value="individual">Individual</SelectItem>
-                  <SelectItem value="student">Student</SelectItem>
                 </SelectContent>
               </Select>
               <FormMessage />
