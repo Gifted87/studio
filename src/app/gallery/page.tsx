@@ -1,28 +1,34 @@
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { PlayCircle } from 'lucide-react';
-import * as admin from 'firebase-admin';
-import { getStorage } from 'firebase-admin/storage';
 import { Suspense } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
+import { adminSDK } from '@/lib/firebase';
+import { getStorage } from 'firebase-admin/storage';
 
 async function getGalleryImages() {
-  if (!admin.apps.length) {
-    admin.initializeApp();
-  }
   const storage = getStorage();
-  const bucket = storage.bucket(process.env.GCLOUD_STORAGE_BUCKET || `${process.env.GOOGLE_CLOUD_PROJECT}.appspot.com`);
+  const bucketName = process.env.GCLOUD_STORAGE_BUCKET || `${process.env.GOOGLE_CLOUD_PROJECT}.appspot.com`;
+  
+  if (!bucketName) {
+      console.error("Firebase Storage bucket name is not configured. Set GCLOUD_STORAGE_BUCKET or GOOGLE_CLOUD_PROJECT environment variables.");
+      return [
+          { src: 'https://placehold.co/600x400.png', alt: 'Configuration error', dataAiHint: 'error' }
+      ];
+  }
+
+  const bucket = storage.bucket(bucketName);
   
   try {
     const [files] = await bucket.getFiles({ prefix: 'gallery/' });
     
-    // Filter out the directory itself
+    // Filter out the directory placeholder itself if it exists
     const imageFiles = files.filter(file => !file.name.endsWith('/'));
 
     if (imageFiles.length === 0) {
         // Return placeholder if no images are found
         return [
-            { src: 'https://placehold.co/600x400.png', alt: 'Placeholder Image', dataAiHint: 'placeholder' }
+            { src: 'https://placehold.co/600x400.png', alt: 'Placeholder Image', dataAiHint: 'mining gallery' }
         ];
     }
     
@@ -35,7 +41,7 @@ async function getGalleryImages() {
         return {
           src: url,
           alt: file.name.split('/').pop()?.split('.')[0] || 'Gallery image',
-          dataAiHint: 'gallery image',
+          dataAiHint: 'mining gallery',
         };
       })
     );
