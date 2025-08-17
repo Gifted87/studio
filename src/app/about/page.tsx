@@ -64,7 +64,7 @@ export default function AboutPage() {
             </div>
             <div>
               <Image
-                src="https://placehold.co/600x400.png"
+                src="https://images.unsplash.com/photo-1523848309072-c199db53f137?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtaW5pbmd8ZW58MHx8fHwxNzU1NDMxODY3fDA&ixlib=rb-4.1.0&q=80&w=1080"
                 alt="Historic mining photo"
                 width={600}
                 height={400}
