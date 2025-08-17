@@ -56,7 +56,7 @@ export default function AboutPage() {
             <div>
               <h2 className="font-headline text-3xl font-bold text-accent mb-4">Our History & Purpose</h2>
               <p className="text-muted-foreground mb-4">
-              The Miners Association of Nigeria (MAN) is a national organization representing individuals and companies involved in mineral resource exploration and exploitation in Nigeria. MAN's membership includes exploration, quarry, and mining companies, as well as service and consultancy firms related to the mining sector.
+              The Miners Association of Nigeria (MAN) is a national organization representing individuals and companies involved in mineral resource exploration and exploitation in Nigeria. Our aim is to promote the growth and development of the mining sector in Nigeria.
               </p>
               <p className="text-muted-foreground">
                 Over the decades, MAN has been instrumental in shaping government policy, promoting investment, and advocating for safe and environmentally responsible mining practices. Our journey is a testament to the resilience and potential of the Nigerian mining industry.

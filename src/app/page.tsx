@@ -63,7 +63,7 @@ export default function Home() {
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
               <h3 className="font-headline text-2xl font-semibold mt-4">Our Mission</h3>
               <p className="mt-2 text-muted-foreground">
-                To empower operators to mine with ease, fostering wealth creation and employment opportunities.
+              To empower operators to mine with ease, fostering wealth creation and employment opportunities.
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -94,7 +94,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-center text-muted-foreground mb-6">
-                Ready to join us? To become a member, you&apos;ll need to have a connection to the mining industry. The process is straightforward: fill out our application form and provide the necessary documents to get started.
+                Ready to join us? To become a member, you'll need to have a connection to the mining industry. The process is straightforward: fill out our application form and provide the necessary information and documents to get started.
                 </p>
                 <div className="text-center">
                    <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">

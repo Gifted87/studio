@@ -34,7 +34,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 mt-1 shrink-0" />
-                <span>123 Mining Avenue, Central Business District, Abuja, Nigeria</span>
+                <span>NEXIM House (1st Floor) Plot 975 Cadastral Zone AO, Central Business District, Abuja, Nigeria</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="h-5 w-5 shrink-0" />

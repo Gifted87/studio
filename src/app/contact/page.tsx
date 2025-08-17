@@ -25,7 +25,7 @@ export default function ContactPage() {
                 <div className="space-y-4 text-muted-foreground">
                   <div className="flex items-start gap-4">
                     <MapPin className="h-6 w-6 text-primary mt-1 shrink-0" />
-                    <p>123 Mining Avenue, Central Business District, Abuja, Nigeria</p>
+                    <p>NEXIM House (1st Floor) Plot 975 Cadastral Zone AO, Central Business District, Abuja, Nigeria</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <Phone className="h-6 w-6 text-primary shrink-0" />
