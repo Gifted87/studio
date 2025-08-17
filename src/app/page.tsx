@@ -1,35 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Newspaper, Landmark } from 'lucide-react';
-
-const newsItems = [
-  {
-    id: 1,
-    title: 'MAN Holds Annual General Meeting',
-    date: 'October 26, 2023',
-    excerpt: 'The association discussed key issues and elected new executives for the coming year...',
-    image: 'https://placehold.co/600x400.png',
-    dataAiHint: 'conference meeting',
-  },
-  {
-    id: 2,
-    title: 'New Policy on Artisanal Mining Released',
-    date: 'October 15, 2023',
-    excerpt: 'The federal government has released new guidelines aimed at formalizing the artisanal mining sector...',
-    image: 'https://images.unsplash.com/photo-1618828665011-0abd973f7bb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuaWdlcmlhfGVufDB8fHx8MTc1NTQyNDQ3N3ww&ixlib=rb-4.1.0&q=80&w=1080',
-    dataAiHint: 'mining regulations',
-  },
-  {
-    id: 3,
-    title: 'Community Development Project Launched in Jos',
-    date: 'September 30, 2023',
-    excerpt: 'In partnership with local communities, MAN has launched a new project to improve infrastructure...',
-    image: 'https://placehold.co/600x400.png',
-    dataAiHint: 'community development',
-  },
-];
+import { ArrowRight, Landmark } from 'lucide-react';
 
 const partners = [
   { name: 'Partner 1', logo: 'https://placehold.co/150x80.png', dataAiHint: 'corporate logo' },
@@ -46,7 +18,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-white">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://images.unsplash.com/photo-1618828665011-0abd973f7bb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuaWdlcmlhfGVufDB8fHx8MTc1NTQyNDQ3N3ww&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Nigerian mining landscape"
           layout="fill"
           objectFit="cover"
@@ -111,46 +83,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest News Section */}
-      <section className="py-16 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl md:text-4xl font-bold text-accent">Latest News &amp; Events</h2>
-            <p className="mt-2 max-w-3xl mx-auto text-muted-foreground">
-              Stay informed with the latest happenings in the Nigerian mining industry.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {newsItems.map((item) => (
-              <Card key={item.id} className="overflow-hidden flex flex-col">
-                <CardHeader className="p-0">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    width={600}
-                    height={400}
-                    className="w-full h-48 object-cover"
-                    data-ai-hint={item.dataAiHint}
-                  />
-                </CardHeader>
-                <CardContent className="p-6 flex-grow flex flex-col">
-                  <p className="text-sm text-muted-foreground mb-2">{item.date}</p>
-                  <CardTitle className="font-headline text-xl mb-2 flex-grow">{item.title}</CardTitle>
-                  <p className="text-muted-foreground mb-4">{item.excerpt}</p>
-                  <Button asChild variant="link" className="p-0 h-auto self-start text-primary">
-                    <Link href="/news">
-                      Read More <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Partners Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-secondary">
         <div className="container mx-auto px-4">
           <h2 className="font-headline text-3xl text-center font-bold text-accent mb-8">
             Our Partners &amp; Affiliates
