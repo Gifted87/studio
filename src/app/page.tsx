@@ -94,7 +94,7 @@ export default function Home() {
               </CardHeader>
               <CardContent>
                 <p className="text-center text-muted-foreground mb-6">
-                Ready to join us? To become a member, you&apos;ll need to have a connection to the mining industry. The process is straightforward: fill out our application form, provide the necessary information and documents, and pay the required fees to get started.
+                Ready to join us? To become a member, you&apos;ll need to have a connection to the mining industry. The process is straightforward: fill out our application form and provide the necessary documents to get started.
                 </p>
                 <div className="text-center">
                    <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
