@@ -16,7 +16,7 @@ const leadershipTeam = [
     name: 'Hon. Ibrahim Mohammed Danyaro',
     title: '1st Vice-President',
     bio: 'Born in 1965, Hon. Danyaro has a background in education and politics, serving as a local government Chairman. An experienced miner of Gypsum, Phosphate, and Limestone, he owns Danyaro Ventures Nig. Ltd. and holds key leadership roles in the association.',
-    image: 'https://placehold.co/100x100.png',
+    image: 'https://i.ibb.co/v6vqxHfk/IMG-20250816-WA0001.jpg',
     initials: 'ID',
     dataAiHint: 'professional headshot man',
   },
