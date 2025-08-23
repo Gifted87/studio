@@ -40,14 +40,16 @@ export default function ContactPage() {
               <div>
                  <h2 className="font-headline text-2xl font-semibold text-accent mb-4">Location</h2>
                  <div className="aspect-video w-full rounded-lg overflow-hidden shadow-md">
-                   <Image 
-                     src="https://placehold.co/600x400.png"
-                     alt="Map showing office location"
-                     width={600}
-                     height={400}
-                     className="w-full h-full object-cover"
-                     data-ai-hint="city map"
-                    />
+                   <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.485655761895!2d7.48701617415277!3d9.060146889212053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a5d24b69329%3A0x1b44a47514781a7a!2sNEXIM%20House!5e0!3m2!1sen!2sng!4v1755500000000!5m2!1sen!2sng"
+                      width="600"
+                      height="450"
+                      style={{ border: 0 }}
+                      allowFullScreen={true}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="w-full h-full"
+                    ></iframe>
                  </div>
               </div>
             </div>
