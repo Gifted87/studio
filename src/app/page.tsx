@@ -19,7 +19,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-white">
         <Image
-          src="https://i.ibb.co/D22N9jN/IMG-20250813-WA0007.jpg"
+          src="https://environmentamerica.org/center/wp-content/uploads/2024/08/Surface_coal_mine_detail_Gillette_Wyoming.jpg"
           alt="Nigerian mining landscape"
           layout="fill"
           objectFit="cover"

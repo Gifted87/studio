@@ -66,6 +66,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'www.nipc.gov.ng',
       },
+      {
+        protocol: 'https',
+        hostname: 'environmentamerica.org',
+      },
     ],
   },
 };
