@@ -19,7 +19,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[60vh] min-h-[400px] w-full flex items-center justify-center text-white">
         <Image
-          src="https://images.unsplash.com/photo-1618828665011-0abd973f7bb8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxuaWdlcmlhfGVufDB8fHx8MTc1NTQyNDQ3N3ww&ixlib=rb-4.1.0&q=80&w=1080"
+          src="https://i.ibb.co/D22N9jN/IMG-20250813-WA0007.jpg"
           alt="Nigerian mining landscape"
           layout="fill"
           objectFit="cover"
