@@ -8,7 +8,7 @@ const leadershipTeam = [
     name: "Mr 'Dele Ayanleke",
     title: 'National President',
     bio: "Born over six decades ago, he holds a Higher Diploma in Marketing and an MBA. He has been in the mining industry since 1999 and is the Director of Operations of Topmost Minerals and Allied Resources Limited. He was elected National President on 3rd August, 2023.",
-    image: 'https://placehold.co/100x100.png',
+    image: 'https://i.ibb.co/D22N9jN/IMG-20250813-WA0007.jpg',
     initials: 'DA',
     dataAiHint: 'professional headshot man',
   },
